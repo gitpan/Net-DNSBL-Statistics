@@ -1,14 +1,15 @@
 <html>
+<!-- version 1.02	1-6-08 -->
 <head>
 <title>DNSBLs Compared</title>
 <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
 </head>
 <body bgcolor="#ffffff">
 
-<table cellspacing=0 cellpadding=5 border=0>
-<tr valign=top>
+<table cellspacing=0 cellpadding=5 border=0 width=100%>
+<tr valign=middle width=100%>
 <td align=center width=163><!-- PUT YOUR LOGO IMAGE HERE --><img src=images/spamcan1.gif width=163></td>
-<td><font size=+2>DNSBL's Compared</font></td></tr>
+<td nowrap><font size=+2>DNSBL's Compared</font></td><td align=right width=100%><font size=+1><a href="/">HOME</a></font>&nbsp;&nbsp;</td></tr>
 </table>
 <table cellspacing=0 cellpadding=5 border=0>
 <tr valign=top><td align=center width=163><!--#include virtual="archive.txt" --></td>

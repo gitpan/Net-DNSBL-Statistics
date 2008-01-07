@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# stats2html.pl	version 1.00, 1-6-08
+# stats2html.pl	version 1.01, 1-6-08
 #
 #
 print STDERR qq|
@@ -42,7 +42,12 @@ response matching the lookup response criteria.
 close F;
 
 $txt .= q(</table>
-</center>
+<p>
+<hr>
+This report was prepared using <a
+href="http://search.cpan.org/search?query=Net%3A%3ADNSBL%3A%3AStatistics&mode=all">Net::DNSBL::Statistics</a>
+available at <a href="http://cpan.org/">CPAN</a>
+</center
 <hr>
 <font size=+1><a href="/">HOME</a> | <a href="../dnsbl_compare.shtml">DNSBLs Compared</a></font>
 </body>

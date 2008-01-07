@@ -1,5 +1,10 @@
 Revision history for Perl extension Net::DNSBL::Statistics
 
+0.03  Mon Jan  7 00:13:36 PST 2008
+	update contrib/dnsbl_compare.shtml
+	updated scripts/stats2html.pl
+	add contrib/stat2generic.pl
+
 0.02  Fri Jan  4 17:22:14 PST 2008
 	move TOTAL to returned array
 	add UNION of all results to array

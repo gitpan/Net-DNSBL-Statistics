@@ -1,14 +1,20 @@
 
-Statistics HTML page HOWTO	version 1.00, 1-6-08
+Statistics HTML page HOWTO	version 1.01, 1-6-08
 
 These files and scripts do the following:
 
 dnsbl_compare.shtml	displays the explanation of how the data
 			is created and the historical files available
 
-scripts/stats2html.pl	converts the output of 'dnsblstat -w into a page
-scripts/stats2list.pl	converts the history directory into an htmlized list
-scripts/stats2page.sh	wraps the above two scripts
+
+contrib/stats2html.pl	converts the output of 'dnsblstat -w into a page
+contrib/stats2list.pl	converts the history directory into an htmlized list
+contrib/stats2page.sh	wraps the above two scripts
+contrib/stat2generic.pl	extract the 'GENERIC' criteria from statistics.conf
+			file and write an HTML page with the regexp's
+
+Each of the script files will generate a brief HELP 
+statement if executed without input arguments
 
 # # # # # # # # # # # # # # # # 
 
@@ -23,10 +29,12 @@ containing IP addresses. It does not matter if their are duplicates, the
 *	create the directory structure
 
 	/home/mydirectory/public_html/history
+	/home/mydirectory/scripts
 	/home/mydirectory/tmp
 
 *	place 'dnsbl_compare.shtml' in the public_html directory
 
+*	copy the script files to the 'scripts' directory
 
 This is the line from my 'cronfile' that is run weekly to produce the
 statistics page on the SpamCannibal web site at:
