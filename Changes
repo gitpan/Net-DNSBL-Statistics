@@ -1,0 +1,9 @@
+Revision history for Perl extension Net::DNSBL::Statistics
+
+0.02  Fri Jan  4 17:22:14 PST 2008
+	move TOTAL to returned array
+	add UNION of all results to array
+	allow multiple writes from 'select' if host will accept them
+
+0.01  Thu Jan  3 18:27:10 PST 2008
+	initial release
