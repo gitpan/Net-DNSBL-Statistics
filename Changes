@@ -1,5 +1,10 @@
 Revision history for Perl extension Net::DNSBL::Statistics
 
+0.04  Tue Jan 22 12:21:25 PST 2008
+	documentation updates
+
+	fixed potential -t switch mis-read in 'dnsblstat'
+
 0.03  Mon Jan  7 00:13:36 PST 2008
 	update contrib/dnsbl_compare.shtml
 	updated scripts/stats2html.pl

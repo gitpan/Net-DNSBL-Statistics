@@ -2,7 +2,7 @@
 #
 # dnsblstat
 #
-# version 1.03, 1-5-08
+# version 1.04, 1-18-08
 #
 # Copyright 2008, Michael Robinton <michael@bizsystems.com>
    
@@ -107,6 +107,7 @@ while ($_ = shift @ARGV) {
   }
   elsif ($_ eq '-t') {
     $TIME = time;
+    next;
   }
   $config = $_;
 }

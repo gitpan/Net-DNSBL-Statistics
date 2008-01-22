@@ -1,5 +1,5 @@
 
-Statistics HTML page HOWTO	version 1.01, 1-6-08
+Statistics HTML page HOWTO	version 1.02, 1-22-08
 
 These files and scripts do the following:
 
@@ -47,3 +47,15 @@ statistics page on the SpamCannibal web site at:
 	./scripts/stats2page.sh tmp/stats.cache \
 	public_html/history \
 	public_html/archive.txt
+
+The script 'stats2list.pl' assumes that the web directory is named
+
+    public{something}
+
+and contains a regexp in the form:
+
+        s|public[^/]*/||
+
+You need to edit this regexp if your HTML web directory is NOT:
+
+        public{something}

@@ -238,7 +238,7 @@ my $conf = {
   	},
 	timeout		=> '15',
 	comment		=> '127.0.0.2,3,4,5,7,8,9,10,11,12',
-	url		=> 'http://www.dnsbl.sorbs.net/using.html',
+	url		=> 'http://www.dnsbl.sorbs.net/using.shtml',
   },
 
   'dnsbl.njabl.org'	=> {	# see http://dnsbl.njabl.org/use.html
