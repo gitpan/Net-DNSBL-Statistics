@@ -1,5 +1,5 @@
 <html>
-<!-- version 1.02	1-6-08 -->
+<!-- version 1.03 2-12-08 -->
 <head>
 <title>DNSBLs Compared</title>
 <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
@@ -29,6 +29,11 @@ The IP addresses used for lookup are the set of addresses that have
 sucessfully connected to port 25 on our mail hosts or spam traps in the week
 ending at midnight each Saturday.
 <p>
+It should be noted that a permanent IP entry is NOT made in the SpamCannibal
+zone file if the IP address is found in one of the DNSBLs used by the mail
+host. Thus, the survey results for SpamCannibal represent IP addresses that
+were not found elsewhere at the time of initial lookup
+<p>
 Our mail hosts run the <a
 href="http://www.spamcannibal.org/">SpamCannibal</a> daemon. The
 SpamCannibal database maintains a semi-permanent cache of IP's which have a
@@ -44,11 +49,6 @@ routinely received. To put this in perspective, we receive at most a few
 hundred valid emails a day, mostly from large ISP's. An estimate of the
 number of non-spam, repeating IP's in the data set is probably under a
 hundred. 
-<p>
-It should be noted that a permanent IP entry is NOT made in the SpamCannibal
-zone file if the IP address is found in one of the DNSBLs used by the mail
-host. Thus, the survey results for SpamCannibal represent IP addresses that
-were not found elsewhere at the time of initial lookup
 <p>
 <font size=+1>Methodology</font>
 <p>

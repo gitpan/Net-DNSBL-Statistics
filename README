@@ -151,6 +151,10 @@ Net::DNSBL::Statistics FUNCTIONS
             <td align=left>127.0.0.2,5,7,8,9,10,12</td>
           </tr>
 
+Statistics Web Page HOWTO
+    Read the "contrib/HOWTO" document that describes the scripts used with
+    'cron' to auto generate web pages for the statistics reports
+
 EXPORT_OK
             run
             plaintxt
