@@ -1,5 +1,8 @@
 Revision history for Perl extension Net::DNSBL::Statistics
 
+0.06  Wed Oct 15 15:03:50 PDT 2008
+	require Net::DNS::ToolKit version 0.41 or higher
+
 0.05  Sun Feb 17 11:49:07 PST 2008
 	fixed typo in contrib/stats2page.sh v1.01
 	that resulted in archive file names being named with the
