@@ -19,20 +19,6 @@ WriteMakefile(
     'dist'		=> {COMPRESS=>'gzip', SUFFIX=>'gz'}
 );
 
-eval {
-	require Net::DNS::ToolKit;
-};
-die "prerequisite Net::DNS::ToolKit not found\n"
-	if $@;
-@_ = &Net::DNS::ToolKit::get_ns();
-if (@_) {
-  foreach(@_) {
-    print 'found nameserver ',&Net::DNS::ToolKit::inet_ntoa($_),"\n";
-  }
-} else {
-  die "resolver not configured, $pkg will not run\n";
-}
-
 sub MY::top_targets {
   package MY;
   my $inherited = shift->SUPER::top_targets(@_);

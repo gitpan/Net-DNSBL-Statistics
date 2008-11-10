@@ -39,7 +39,7 @@ print "ok 1\n";
 # (correspondingly "not ok 13") depending on the success of chunk 13
 # of the test code):
 
-$test = 2;
+my $test = 2;
 
 require './recurse2txt';
 
@@ -49,8 +49,9 @@ select STDOUT;
 $| = 1;
 
 sub ok {
-  print "ok $test\n";
-  ++$test;
+  my $todo = $_[0] ? "# TODO $_[0]" : '';
+  print "ok $todo\n";
+#  ++$test;
 }
 
 umask 027;
@@ -95,7 +96,7 @@ sub gotexp {
       return;
     }
   }
-  &ok;
+  &ok();
 }
 
 sub expect {
@@ -289,7 +290,7 @@ close T;
 my $L = open_udpNB();
 print "could not open local unbound socket\nnot "
 	unless $L;
-&ok;
+&ok();
 
 ## test 3	bind a listner for testing
 my $port;   
@@ -301,7 +302,7 @@ foreach(10000..10100) {         # find a port to bind to
 }
 print "could not bind a port for remote\nnot "
         unless $port;
-&ok;
+&ok();
 
 my $L_sin = sockaddr_in($port,INADDR_LOOPBACK);
 
@@ -309,7 +310,7 @@ my $L_sin = sockaddr_in($port,INADDR_LOOPBACK);
 my $R = open_udpNB();
 print "could not open unbound send socket\nnot "
 	unless $R;
-&ok;
+&ok();
 
 my $Alarm = 150;
 my $kid = fork;
@@ -417,7 +418,7 @@ eval {
 };
 print "$@\nnot "
 	if $@;
-&ok;
+&ok();
 
 my %dnsbls = @rv;
 
@@ -426,7 +427,7 @@ my $exp = 8;
 my $total = $dnsbls{TOTAL}->{C};
 print "got: $total, exp: $exp\nnot "
 	unless $total == $exp;
-&ok;
+&ok();
 
 ## test 7	check array values
 $exp = q|17	= {
@@ -470,7 +471,7 @@ eval {
 
 print "$@\nnot "
 	if $@;
-&ok;
+&ok();
 
 ## test 9	check count values
 my %qc = @rv;
@@ -495,7 +496,7 @@ eval {
 
 print "$@\nnot "
 	if $@;
-&ok;
+&ok();
 
 sub ufix {
   my $union = shift;
@@ -540,7 +541,7 @@ eval {
 };
 print "$@\nnot "
 	if $@;
-&ok;
+&ok();
 
 %dnsbls = @rv;
 $total = $dnsbls{TOTAL}->{C};
@@ -548,7 +549,7 @@ $total = $dnsbls{TOTAL}->{C};
 $exp = 8;
 print "got: $total, exp: $exp\nnot "
 	unless $total == $exp;
-&ok;
+&ok();
 
 ## test 14	check array values
 $exp = q|15	= {
@@ -589,7 +590,7 @@ eval {
 
 print "$@\nnot "
 	if $@;
-&ok;
+&ok();
 
 ## test 16	check count values
 %qc = @rv;
@@ -614,7 +615,7 @@ eval {
 
 print "$@\nnot "
 	if $@;
-&ok;
+&ok();
 
 ## test 18	check count values
 %union = @rv;
@@ -639,7 +640,7 @@ eval {
 };
 print "$@\nnot "
 	if $@;
-&ok;
+&ok();
 
 %dnsbls = @rv;
 $total = $dnsbls{TOTAL};
@@ -647,7 +648,7 @@ $total = $dnsbls{TOTAL};
 $exp = 8;
 print "got: $total, exp: $exp\nnot "
 	unless $total == $exp;
-&ok;
+&ok();
 
 ## test 21	check array values
 $exp = q|6	= {
