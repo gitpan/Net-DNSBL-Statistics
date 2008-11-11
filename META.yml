@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Net-DNSBL-Statistics
-version:             0.09
+version:             0.10
 abstract:            ~
 license:             ~
 author:              ~
@@ -9,7 +9,7 @@ distribution_type:   module
 requires:     
     Net::DNS::Codes:               0.09
     Net::DNS::ToolKit:             0.41
-    Net::DNSBL::MultiDaemon:       0.24
+    Net::DNSBL::MultiDaemon:       0.25
 meta-spec:
     url:     http://module-build.sourceforge.net/META-spec-v1.3.html
     version: 1.3
