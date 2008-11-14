@@ -1,5 +1,8 @@
 Revision history for Perl extension Net::DNSBL::Statistics
 
+0.11 Fri Nov 14 14:35:20 PST 2008
+	more work on t/run.t for smoker testing compatibility
+
 0.10  Tue Nov 11 13:13:31 PST 2008
 	fix broken test in t/run.t
 

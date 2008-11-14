@@ -30,7 +30,7 @@ use vars qw(
 require Exporter;
 @ISA = qw(Exporter);
 
-$VERSION = do { my @r = (q$Revision: 0.10 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 0.11 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 @EXPORT_OK = qw(
         run
@@ -175,7 +175,7 @@ The dnsbl count hash will have two added keys:
 my $w = 0;
 my @w = qw( \ | / - );
 sub whirl {
-#  return;
+  return;
   print STDERR "\r",$w[$w],"\r";
   $w = 0 if ++$w > $#w;
 }
