@@ -1,5 +1,14 @@
 Revision history for Perl extension Net::DNSBL::Statistics
 
+0.12  Sun Nov 16 16:47:08 PST 2008
+	further revisions to t/run.t for smoker tests
+
+	update to support INCLUDE keys in the config file
+
+  NOTE: dnsblstat has been updated to support INCLUDE keys.
+	you must update your dnsblmon script if you wish
+	to use this feature.
+
 0.11 Fri Nov 14 14:35:20 PST 2008
 	more work on t/run.t for smoker testing compatibility
 
