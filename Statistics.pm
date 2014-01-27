@@ -30,7 +30,7 @@ use vars qw(
 require Exporter;
 @ISA = qw(Exporter);
 
-$VERSION = do { my @r = (q$Revision: 0.12 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 0.13 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 @EXPORT_OK = qw(
         run
@@ -641,7 +641,7 @@ Michael Robinton, michael@bizsystems.com
 
 =head1 COPYRIGHT
 
-Copyright 2008, Michael Robinton.
+Copyright 2008-2014, Michael Robinton.
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation; either version 2 of the License, or 
