@@ -30,7 +30,7 @@ use vars qw(
 require Exporter;
 @ISA = qw(Exporter);
 
-$VERSION = do { my @r = (q$Revision: 0.13 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 0.14 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 @EXPORT_OK = qw(
         run
@@ -569,7 +569,9 @@ sub plaintxt {
   my $txt = '';
   my $tot = $dnsbls->{TOTAL}/100;
   my $len = length($dnsbls->{TOTAL});
-  foreach(sort{$dnsbls->{"$b"} <=> $dnsbls->{"$a"}} keys %$dnsbls) {
+  foreach(sort{$dnsbls->{"$b"} <=> $dnsbls->{"$a"}
+				||
+			    $a cmp $b } keys %$dnsbls) {
     my $comment = cmurl($conf,$_);
     $txt .= sprintf("% ${len}u% 6.1f%% %s %s\n",$dnsbls->{"$_"},$dnsbls->{"$_"}/$tot,$_,$comment);
   }
@@ -612,7 +614,9 @@ sub htmltxt {
   my $html = '';
   my $tot = $dnsbls->{TOTAL}/100;
   my $len = length($dnsbls->{TOTAL});
-  foreach(sort{$dnsbls->{"$b"} <=> $dnsbls->{"$a"}} keys %$dnsbls) {
+  foreach(sort{$dnsbls->{"$b"} <=> $dnsbls->{"$a"}
+				||
+			    $a cmp $b } keys %$dnsbls) {
     my($comment,$url) = cmurl($conf,$_,1);
     my $aa = $url ? '</a>' : '';
     my $count = $dnsbls->{"$_"};

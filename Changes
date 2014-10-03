@@ -1,5 +1,10 @@
 Revision history for Perl extension Net::DNSBL::Statistics
 
+0.14  Thu Oct  2 18:37:19 PDT 2014
+	modified 'htmltxt' and 'plaintxt' to order the
+	output information alphabetically when the count
+	information is identical
+
 0.13  Mon Jan 27 11:59:58 PST 2014
         modify Makefile.PL to bypass missing 'pod2text'
 
